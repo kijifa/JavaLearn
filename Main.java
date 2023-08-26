@@ -1,4 +1,6 @@
-import static challenges.MyInicials.writeMyInicials;
+import challenges.MyInicials;
+
+import static miniprojects.Convertor.convert;
 import static workbooks.FirstProgram.firstProgram;
 
 public class Main {
@@ -7,7 +9,9 @@ public class Main {
         System.out.println("Let the game begin");
         System.out.println("Workbook 1.1");
             firstProgram();
-        System.out.print("Challenge 1 - write an inicials");
-            writeMyInicials();
+        System.out.println("Challenge 1 - write an inicials");
+            MyInicials.main();
+        System.out.println("Currency convertor");
+            convert();
     }
 }

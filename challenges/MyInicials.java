@@ -1,7 +1,7 @@
 package challenges;
 
 public class MyInicials {
-    public static void writeMyInicials(){
+    public static void main(){
         System.out.println("JJJJJ  K   K");
         System.out.println("  J    K  K ");
         System.out.println("  J    K K  ");
