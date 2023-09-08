@@ -27,22 +27,24 @@ public class GuessNumber {
             System.out.println("What is your int number between 0 to 10");
         }
         else {
-            System.out.println("Try again. What is your int number between 0 to 10");
+            System.out.println("Try again. What is your int number between 1 to 10");
         }
         user_number = value.nextInt();
         System.out.println("You have " + user_number);
     }
 
     public void compare(){
-        if (user_number == guess_number) {
-            System.out.println("You got it! Both numbers are " + guess_number);
-            System.out.println("You needed " + history.size());
-            done = true;
-        }
-        else {
-            history.add(user_number);
-            System.out.println("You have missed! You already tried " + history);
-
+        if (0 < user_number & user_number < 11) {
+            if (user_number == guess_number) {
+                System.out.println("You got it! Both numbers are " + guess_number);
+                System.out.println("You needed " + history.size());
+                done = true;
+            } else {
+                history.add(user_number);
+                System.out.println("You have missed! You already tried " + history);
+            }
+        } else {
+            System.out.println("Your number " + user_number + " is not between 1 and 10");
         }
     }
 
