@@ -1,4 +1,5 @@
 import challenges.MyInicials;
+import workbooks.GuessNumber;
 
 import static miniprojects.Convertor.convert;
 import static workbooks.FirstProgram.firstProgram;
@@ -11,7 +12,9 @@ public class Main {
             firstProgram();
         System.out.println("Challenge 1 - write an inicials");
             MyInicials.main();
-        System.out.println("Currency convertor");
-            convert();
+        //System.out.println("Currency convertor");
+        //    convert();
+        System.out.println("Guess a number game");
+             new GuessNumber();
     }
 }
