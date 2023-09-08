@@ -1,17 +1,21 @@
 package workbooks;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
     int user_number = 0;
     boolean done = false;
+    List<Integer> history = new ArrayList();
+
     Random rand = new Random();
     final int guess_number = rand.nextInt(10);
 
     public GuessNumber(){
-        getNumber();
         while (!done) {
+            getNumber();
             compare();
         }
 
@@ -32,11 +36,12 @@ public class GuessNumber {
     public void compare(){
         if (user_number == guess_number) {
             System.out.println("You got it! Both numbers are " + guess_number);
+            System.out.println("You needed " + history.size());
             done = true;
         }
         else {
-            System.out.println("You have missed! Your number is " + user_number
-                    + " but you should choose " + guess_number);
+            history.add(user_number);
+            System.out.println("You have missed! You already tried " + history);
 
         }
     }
